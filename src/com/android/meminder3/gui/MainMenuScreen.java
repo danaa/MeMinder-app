@@ -218,6 +218,7 @@ public class MainMenuScreen extends Activity
 		super.onResume();
 		
 		this.showAgendaList();
+		
 		AlarmData.AlarmStatus status = Logic.getInstance().getAlarmData(this).getStatus();
 
 		// on/off button
@@ -235,6 +236,45 @@ public class MainMenuScreen extends Activity
 		super.onStop();
 	}
 
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// save activity state before it destroyed
+	// by changing screen orientation for example
+	@Override
+	protected void onSaveInstanceState(Bundle outState) 
+	{
+	       super.onSaveInstanceState(outState);
+	       //save the relevant information
+	       outState.putInt("mode", _mode.ordinal());
+	}
+	
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// restore the activity state after the activity is destroyed
+	@Override
+	public void onRestoreInstanceState(Bundle savedInstanceState) 
+	{
+	       super.onRestoreInstanceState(savedInstanceState);
+	       //restore the relevant information
+	       int mode = savedInstanceState.getInt("mode");
+	       switch(mode)
+	       {
+	       	case 0:
+	       		_mode = Mode.REMINDER;
+	       		_remind.performClick();
+	       		break;
+	       	case 1:
+	       		_mode = Mode.WEEK;
+	       		_week.performClick();
+	       		break;
+	       	case 2:
+	       		_mode = Mode.TWO_WEEKS;
+	       		_twoWeeks.performClick();
+	       		break;
+	       }
+	       //this.showAgendaList();
+	}
+	
 	//-------------------------------------------------------------------------------------------------------------
 	
 	public void doCollapse(View v)
@@ -395,7 +435,7 @@ public class MainMenuScreen extends Activity
 			_mode = Mode.TWO_WEEKS;
 		}
 		bottomButtonPressedGraphic();
-		showAgendaList();
+		this.showAgendaList();
 	}
 	
 	/**

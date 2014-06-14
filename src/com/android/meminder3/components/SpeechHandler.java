@@ -3,10 +3,13 @@ package com.android.meminder3.components;
 
 import java.util.ArrayList;
 import java.util.Locale;
+
 import com.android.meminder3.dataStractures.ActivityData;
 import com.android.meminder3.utils.utils;
+
 import android.content.Context;
 import android.speech.tts.TextToSpeech;
+import android.util.Log;
 
 
 public class SpeechHandler 
@@ -39,10 +42,13 @@ public class SpeechHandler
 			{
 				if(status == TextToSpeech.SUCCESS)
 				{
-					_tts.setLanguage(Locale.UK);
+					Log.w("tts", "init success");
+					_tts.setLanguage(Locale.US);
 					if(_toSpeak != null)
 						_tts.speak("The reminder is: " + _toSpeak , TextToSpeech.QUEUE_FLUSH, null);
 				}
+				else
+					Log.w("tts", "init unseccussful");
 			}
 		});
 	}
