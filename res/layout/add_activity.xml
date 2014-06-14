@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:weightSum="8"
+    tools:context=".gui.AddActivityScreen" >
+
+    <LinearLayout
+        android:id="@+id/topButtonsLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" 
+        >
+
+        <Button
+            android:id="@+id/addActivityButton"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="0dip"
+            android:layout_weight="0.4"
+            android:background="@drawable/top_button_edit"
+            android:text="done" />
+
+        <Button
+            android:id="@+id/cancelInEdit"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.4"
+            android:background="@drawable/top_button_edit"
+            android:text="cancel" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/typeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="3" 
+        android:background="#01B6AD"
+        >
+
+        <Button
+            android:id="@+id/oneTimeButton"
+            style="@style/AgendaButtonText"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_button"
+            android:text="One-Time" />
+
+        <Button
+            android:id="@+id/taskButton"
+            style="@style/AgendaButtonText"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_button"
+            android:text="Task" />
+
+        <Button
+            android:id="@+id/repeatingButton"
+            style="@style/AgendaButtonText"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_button"
+            android:text="Repeating" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/repeatingLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="3" 
+        android:background="#01B6AD"
+        >
+
+        <Button
+            android:id="@+id/yearlyButton"
+            style="@style/AgendaButtonText"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_button"
+            android:text="Yearly" />
+
+        <Button
+            android:id="@+id/monthlyButton"
+            style="@style/AgendaButtonText"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_button"
+            android:text="Monthly" />
+
+        <Button
+            android:id="@+id/weeklyButton"
+            style="@style/AgendaButtonText"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_button"
+            android:text="Weekly" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTitleText"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="What" 
+        />
+
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:weightSum="5" >
+
+        <Spinner
+            android:id="@+id/prepSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" 
+            />
+
+        <EditText
+            android:id="@+id/editSubjectText"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="3"
+            android:ems="10"
+            android:hint="Who, where" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timeAndDateLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/date_button"
+            style="@style/AgendaButtonText"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/add_activity_details_button"
+            android:text="Date" 
+            android:textColor="#000"
+            />
+
+        <Button
+            android:id="@+id/time_button"
+            style="@style/AgendaButtonText"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/add_activity_details_button"
+            android:text="Time"
+            android:textColor="#000" 
+            />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/editTextinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textMultiLine" 
+        android:hint="Anything else?"
+        android:layout_margin="10dip"
+        >
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <CheckBox
+            android:id="@+id/saveCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="save custom"
+            android:textColor="#000" 
+            />
+
+        <CheckBox
+            android:id="@+id/googleCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="sync with google calendar" 
+            android:textColor="#000" 
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

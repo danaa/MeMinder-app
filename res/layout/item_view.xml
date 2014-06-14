@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#fff"
+    android:clickable="false"
+	android:descendantFocusability="blocksDescendants"
+	android:focusable="false"
+	android:focusableInTouchMode="false"
+    >
+
+    <RelativeLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+		android:focusable="false"
+		android:focusableInTouchMode="false"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/birthday" 
+            android:clickable="false"
+			android:focusable="false"
+			android:focusableInTouchMode="false"
+            />
+
+        <TextView
+            android:id="@+id/event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="The event"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:clickable="false"
+			android:focusable="false"
+			android:focusableInTouchMode="false"
+			android:textColor="#000"
+            />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignLeft="@+id/event"
+            android:text="The time"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:clickable="false"
+			android:focusable="false"
+			android:focusableInTouchMode="false"
+			android:textColor="#01B6AD"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_marginBottom="-60dip"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="66dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="info" 
+            android:clickable="false"
+			android:focusable="false"
+			android:focusableInTouchMode="false"
+			android:textColor="#9D9B9E"
+            />
+
+        <RelativeLayout
+            android:id="@+id/extensionButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+			android:focusable="false"
+			android:focusableInTouchMode="false"
+			android:background="#E9E9E9"
+            >
+
+            <ImageButton
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:src="@drawable/ic_action_edit" 
+                android:background="@drawable/expansion_button"
+                android:layout_marginLeft="66dp" 
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="3dip"
+                android:onClick="doEdit"
+                />
+
+            <ImageButton
+                android:id="@+id/discard"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:src="@drawable/ic_action_discard" 
+                android:background="@drawable/expansion_button" 
+                android:layout_toRightOf="@+id/edit"
+                android:layout_marginLeft="10dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="3dip"
+                android:onClick="doDiscard"
+                />
+
+            <ImageButton
+                android:id="@+id/collaspe"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:src="@drawable/ic_action_collapse" 
+                android:background="@drawable/expansion_button" 
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="3dip"
+                android:onClick="doCollapse"
+                />
+            
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<resources>
+
+    <string name="app_name">MeMinder</string>
+    <string name="schedule_alarm">Schedule an Alarm</string>
+    <string name="add_activity">Add New Activity</string>
+    
+    <string-array name="snooze_array">
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>20 minutes</item>
+        <item>30 minutes</item>
+    </string-array>
+    
+    <string-array name="prep_array">
+        <item></item>
+        <item>at</item>
+        <item>to</item>
+        <item>of</item>
+        <item>with</item>
+        <item>in</item>
+        <item>on</item>
+    </string-array> 
+    
+    <string-array name= "day_of_month_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+    
+    
+    
+	<style name="ButtonText">
+    	<item name="android:layout_width">fill_parent</item>
+    	<item name="android:layout_height">wrap_content</item>
+    	<item name="android:textColor">#ffffff</item>
+    	<item name="android:gravity">center</item>
+    	<item name="android:layout_margin">3dp</item>
+    	<item name="android:textSize">25dp</item>
+    	<item name="android:textStyle">bold</item>
+    	<item name="android:shadowColor">#000000</item>
+    	<item name="android:shadowDx">1</item>
+    	<item name="android:shadowDy">1</item>
+    	<item name="android:shadowRadius">2</item>
+	</style>
+	
+	<style name="PanelButtonText">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+    	<item name="android:textColor">#000000</item>
+    	<item name="android:gravity">center</item>
+    	<item name="android:textSize">20dp</item>
+	</style>
+	
+	<style name="AgendaButtonText">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+    	<item name="android:textColor">#ffffff</item>
+    	<item name="android:gravity">center</item>
+    	<item name="android:textSize">15dp</item>
+	</style>
+    
+
+</resources>

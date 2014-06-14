@@ -1,0 +1,89 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.meminder3"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        
+        <activity
+            android:name=".gui.MainMenuScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".gui.ScheduleAlarmScreen"
+            android:label="Schedule An Alarm"
+            android:theme="@android:style/Theme.NoTitleBar" 
+            >
+        </activity>
+        
+        <activity 
+            android:name=".gui.AlarmReceiverActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+            
+        </activity>
+       
+        <activity
+            android:name=".gui.TemplatesListScreen"
+            android:label="Choose Template" 
+            android:theme="@android:style/Theme.Dialog"
+            >
+        </activity>
+        
+        <activity
+            android:name=".gui.AddActivityScreen"
+            android:label="Add/Modify" 
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>
+        
+        <activity
+            android:name=".gui.AgendaScreen"
+            android:label="Agenda" 
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>
+        
+        <activity
+            android:name=".gui.ViewActivityScreen"
+            android:label="View Activity" 
+            android:theme="@android:style/Theme.Dialog"
+            >
+        </activity>
+        
+         <activity
+            android:name=".gui.CalendarScreen"
+            android:label="Calendar" 
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>
+        
+        <activity
+            android:name=".gui.CalendarDayScreen"
+            android:label="Calendar day" 
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>
+        
+         
+    </application>
+
+</manifest>
