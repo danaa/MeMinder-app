@@ -495,7 +495,7 @@ public class MainMenuScreen extends Activity
 			else
 				str += "task";
 			theTime.setText(str);
-			
+
 			// put the image that corresponds to the event
 			ImageView image = (ImageView) itemView.findViewById(R.id.imageView);
 			String title = curr.getTitle();
@@ -511,18 +511,18 @@ public class MainMenuScreen extends Activity
 				image.setImageResource(R.drawable.interview);
 			else
 				image.setImageResource(R.drawable.custom);
-			
+
 			// put a different color in rows with even index 
 			/*if(position % 2 == 0)
 				itemView.setBackgroundColor(Color.parseColor(ROW_COLOR)); */// now workings
-				
-			
+
+
 			// Resets the toolbar to be closed
-            View toolbar = itemView.findViewById(R.id.toolbar);
-            LayoutParams params = (LinearLayout.LayoutParams)toolbar.getLayoutParams();
-            params.bottomMargin = -60;
-            toolbar.setVisibility(View.GONE);
-			
+			View toolbar = itemView.findViewById(R.id.toolbar);
+			LayoutParams params = (LinearLayout.LayoutParams)toolbar.getLayoutParams();
+			params.bottomMargin = -60;
+			toolbar.setVisibility(View.GONE);
+
 			return itemView;
 		}
 	}
